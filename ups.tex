@@ -1,0 +1,193 @@
+\documentclass[a4paper,10pt,landscape]{article}
+\usepackage{luacode}
+\usepackage{polyglossia} % Поддержка многоязычности (fontspec подгружается автоматически)
+\setmainlanguage[babelshorthands=true]{russian} % Язык по-умолчанию русский с поддержкой приятных команд пакета babel
+\setotherlanguage{english} % Дополнительный язык = английский (в американской вариации по-умолчанию)
+\setmonofont{CMU Typewriter Text} % моноширинный шрифт
+\newfontfamily\cyrillicfonttt{CMU Typewriter Text} % моноширинный шрифт для кириллицы
+\defaultfontfeatures{Ligatures=TeX} % стандартные лигатуры TeX, замены нескольких дефисов на тире и т. п. Настройки моноширинного шрифта должны идти до этой строки, чтобы при врезках кода программ в коде не применялись лигатуры и замены дефисов
+\setmainfont{CMU Serif} % Шрифт с засечками
+\newfontfamily\cyrillicfont{CMU Serif} % Шрифт с засечками для кириллицы
+\setsansfont{CMU Sans Serif} % Шрифт без засечек
+\newfontfamily\cyrillicfontsf{CMU Sans Serif} % Шрифт без засечек для кириллицы
+\usepackage{circuitikz}
+\usepackage{amsmath,graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol,multirow}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{textpos}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{blindtext}
+
+\paperwidth = 297mm
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+
+
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+     \Large{\textbf{Источник бесперебойного питания hh24ups}} \\
+\end{center}
+\begin{multicols}{3}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{Общее описание}
+
+	Устройство обеспечивает резервированное питание контроллера hh24lock электромагнитного или электромеханического замка и исполняет функции дверного звонка и источника питания для релейного модуля hh24relay. \par 
+
+
+	В вариантах исполнения S2 - S4 устройство оснащается также датчиками уровня звука и/или присутствия, предназначенными для реализации дополнительного функционала контроллера hh24lock. \par 
+
+\section{Варианты исполнения}
+
+\noindent\begin{tabular}{p{1cm}|p{2cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{}&\texttt{Дверной звонок}&\texttt{Датчик звука}&\texttt{Датчик присутствия}\\
+\hline
+\textbf{S1}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S2}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S3}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{+}}\\
+\textbf{S4}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}\\
+\hline
+\end{tabular}
+
+\section{Технические характеристики}
+
+\noindent\begin{tabular}{p{6cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{Напряжение питания}&\multicolumn{1}{c}{\texttt{110-220}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Ток потребления}&\multicolumn{1}{c}{\texttt{<0.18}}&\multicolumn{1}{c}{\texttt{мА}}\\
+\hline
+\texttt{Рекомендуемый номинал предохранителя}&\multicolumn{1}{c}{\texttt{5}}&\multicolumn{1}{c}{\texttt{А}}\\
+\hline
+\texttt{Напряжение на выходе питания контроллера}&\multicolumn{1}{c}{\texttt{11.4}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Напряжение на выходе питания релейного модуля}&\multicolumn{1}{c}{\texttt{3.4-4.2}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Максимальный ток на выходе 12 В}&\multicolumn{1}{c}{\texttt{2.1}}&\multicolumn{1}{c}{\texttt{А}}\\
+\hline
+\texttt{Максимальный ток на выходе 3.4 В}&\multicolumn{1}{c}{\texttt{50}}&\multicolumn{1}{c}{\texttt{мА}}\\
+\hline
+\texttt{Безтоковая пауза при исчезновении питания от сети, не более}&\multicolumn{1}{c}{\texttt{150}}&\multicolumn{1}{c}{\texttt{мс}}\\
+\hline
+\texttt{Безтоковая пауза при выходе из автономного режима (появления напряжения сети)}&\multicolumn{1}{c}{\texttt{0}}&\multicolumn{1}{c}{\texttt{с}}\\
+\hline
+\texttt{Время автономной работы в режиме ожидания, не менее}&\multicolumn{1}{c}{\texttt{48}}&\multicolumn{1}{c}{\texttt{час}}\\
+\hline
+\texttt{Количество срабатываний замка за 20 сек в автономном режиме до включения защиты, не менее}&\multicolumn{1}{c}{\texttt{4}}&\multicolumn{1}{c}{\texttt{раз}}\\
+\hline
+\texttt{Время полной зарядки аккумуляторов после цикла автономной работы в течении 24 часов, не более}&\multicolumn{1}{c}{\texttt{3}}&\multicolumn{1}{c}{\texttt{час}}\\
+\hline
+\texttt{Диапазон срабатывания датчика звука}&\multicolumn{1}{c}{\texttt{75-110}}&\multicolumn{1}{c}{\texttt{дБ}}\\
+\hline
+\end{tabular}
+
+\section{Функции защиты}
+
+\begin{enumerate} 
+  \item защита от перезарядки встроенных аккумуляторов    
+  \item защита от повреждения встроенных аккумуляторов
+  \item защита от короткого замыкания на входе
+  \item защита от короткого замыкания на выходе
+  \item защита от превышения максимально допустимого тока
+\end{enumerate}
+
+\textbf{При срабатывании любой функции защиты во время работы устройства в автономном режиме самостоятельное восстановление работы устройства возможно только после подключения его к питающей сети}
+
+
+\section{Подключение устройства}
+
+\noindent\begin{tabular}{p{3cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{}&\texttt{Цвет провода UPS}&\texttt{Цвет провода контоллера}\\
+\hline
+\texttt{+12 В}&\multicolumn{1}{c}{\texttt{Светло-красный}}&\multicolumn{1}{c}{\texttt{Красный}}\\
+\hline
+\texttt{GND}&\multicolumn{1}{c}{\texttt{Серый}}&\multicolumn{1}{c}{\texttt{Черный}}\\
+\hline
+\texttt{AO (только для вариантов S2 и S4)}&\multicolumn{1}{c}{\texttt{Зеленый}}&\multicolumn{1}{c}{\texttt{Зеленый}}\\
+\hline
+\texttt{DO (только для вариантов S3 и S4}&\multicolumn{1}{c}{\texttt{Белый}}&\multicolumn{1}{c}{\texttt{Белый}}\\
+\hline
+\texttt{Button +*}&\multicolumn{1}{c}{\texttt{Желтый}}&\multicolumn{1}{c}{\texttt{Розовый}}\\
+\hline
+\texttt{Button -*}&\multicolumn{1}{c}{\texttt{Коричневый}}&\multicolumn{1}{c}{\texttt{Розовый}}\\
+\hline
+\end{tabular}
+
+*Если устройство не планируется использовать как дверной звонок, то подключением контактов Button можно принебречь. 
+
+\section{Настройка датчика звука}
+
+Для исполнений S2 и S4 устройства в зависимости от его места размещения может потребоваться настройка силами пользователя уровня срабатывания датчика звука, по умолчанию настроенного на 95 дБ. 
+
+Для осуществления настройки необходимо обеспечить наличия звукового сигнала нужного уровня. Необходимо тонкой отверткой вращать потенциометр через сетку динамика звонка до загорания двух красных светодиодов. Их срабатывание указывает на установку порогового уровня, соответствующего текущему уровню шума в месте настройки. 
+
+Более подробную информацию о настройке датчиков можно получить в документации на контроллер hh24lock.
+
+\section{Возможные неполадки и способы их устранения}
+
+\noindent\begin{tabular}{p{4cm}|p{4cm}}
+\hline
+\texttt{Нет напряжения на выходе в автономном режиме}&\texttt{Кратковременно подключить устройство к сети}\\
+\hline
+\texttt{Устройство не заряжается в процессе работы, но заряжается в режиме ожидания}&\texttt{Отключить устройство от сети на 10-15 минут и включить заново}\\
+\hline
+\texttt{Устройство не работает в автономном режиме}&\texttt{Заменить аккумуляторы}\\
+\hline
+\texttt{Устройство не работает ни в одном из режимов}&\texttt{Проверить предохранитель и оставить на зарядку в дежурном режиме}\\
+\hline
+\end{tabular}
+
+\section{Замена аккумуляторов}
+
+\textbf{Замена аккумуляторов возможна только парами.} Необходимо использовать аккумуляторы типа 18650, поддерживающие высокотоковый разряд. 
+
+Замену необходимо производить на выключенном от сети устройстве. После замены аккумуляторов сработает защита и устройство автоматически отключится. Для проверки его работоспособности с замененными аккумуляторами необходимо кратковременно включить устройство в сеть. 
+
+\Large{	
+\begin{luacode}
+tex.print('Серийный номер уст-ва: '..math.ceil(math.random()*10000))
+\end{luacode}
+\par
+Подробная информация: https://hh24lock.ru/
+}
+
+\end{multicols}
+\end{document}
+
+
+
