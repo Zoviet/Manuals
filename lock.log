@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  12 SEP 2024 16:52
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  12 SEP 2024 17:59
  restricted system commands enabled.
-**./block.tex
-(./block.tex
+**./lock.tex
+(./lock.tex
 LaTeX2e <2021-11-15> patch level 1
 Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
 Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
@@ -226,12 +226,12 @@ braces):
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
 Module polyglossia Info: Language data for russian
-(polyglossia)            loader	loadhyph-ru.tex
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-ru.pat.txt
-(polyglossia)            hyphenation	hyph-ru.hyp.txt
 (polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	 on input line 17
+(polyglossia)            hyphenation	hyph-ru.hyp.txt
+(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-ru.tex on input line 17
 Module polyglossia Info: Language russian was not yet loaded; created with id 2 
 on input line 17
 Package polyglossia Info: Option: Russian, numerals=arabic.
@@ -1313,13 +1313,13 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box113
 \enit@count@id=\count356
 \enitdp@description=\count357
-) (./block.aux
+) (./lock.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus)
-\openout1 = block.aux
+\openout1 = lock.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -1387,10 +1387,10 @@ LaTeX Info: Redefining \ref on input line 54.
 LaTeX Info: Redefining \pageref on input line 54.
 LaTeX Info: Redefining \nameref on input line 54.
 
-(./block.out) (./block.out)
+(./lock.out) (./lock.out)
 \@outlinefile=\write4
 
-\openout4 = block.out
+\openout4 = lock.out
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1436,125 +1436,106 @@ luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
 0.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 0.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-70.
+80.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-70.
+80.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 70.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+(Font)              <5> on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
-[]|\TU/CMUTypewriterText(1)/m/n/8 Под-клю-че-ние мо-ду-ля
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+[]|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-[]|\TU/CMUTypewriterText(1)/m/n/8 Под-клю-че-ние мо-ду-ля
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+[]|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-Underfull \hbox (badness 7379) in paragraph at lines 254--255
-[]|\TU/CMUTypewriterText(1)/m/n/8 Крат-ко-вре-мен-но под-кл
-ю-чить
+
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+[]|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
+ []
+
+
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--83
+[]|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
-Overfull \vbox (1.61435pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (7.08609pt too high) has occurred while \output is active []
-
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1605,37 +1586,37 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- (./block.aux
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lock.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus)
-Package rerunfilecheck Info: File `block.out' has not changed.
-(rerunfilecheck)             Checksum: 2E9497BA20669CB957E4BBD1443AA60B;2954.
+Package rerunfilecheck Info: File `lock.out' has not changed.
+(rerunfilecheck)             Checksum: 62872E22D818FA1466A40C7B6B81952C;2790.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41409 strings out of 477805
- 305307,1648299 words of node,token memory allocated
+ 40897 strings out of 477805
+ 156304,1648299 words of node,token memory allocated
  554 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 62 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:3,2:5245,3:3821,4:135,5:1156,6:323,7:27579,8:39,9:3651,10:26,1
-1:3487
- 60863 multiletter control sequences out of 65536+600000
- 70 fonts using 16413215 bytes
- 115i,8n,111p,575b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-mathit.enc}</usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicod
-e/cmunrm.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmu
-ntt.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.o
-tf></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr8.pfb>
-Output written on block.pdf (1 page, 66418 bytes).
+   avail lists: 1:1,2:951,3:623,4:105,5:684,6:162,7:13912,8:33,9:1149,10:24,11:1
+833
+ 60353 multiletter control sequences out of 65536+600000
+ 71 fonts using 16758663 bytes
+ 115i,8n,111p,531b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmuntt.otf></usr
+/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunrm.otf></usr/shar
+e/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.otf>
+Output written on lock.pdf (1 page, 29956 bytes).
 
-PDF statistics: 95 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 131072)
- 104 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 131072)
+ 88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,0 +1,164 @@
+\documentclass[a4paper,10pt,landscape]{article}
+\usepackage{luacode}
+\usepackage{polyglossia} % Поддержка многоязычности (fontspec подгружается автоматически)
+\setmainlanguage[babelshorthands=true]{russian} % Язык по-умолчанию русский с поддержкой приятных команд пакета babel
+\setotherlanguage{english} % Дополнительный язык = английский (в американской вариации по-умолчанию)
+\setmonofont{CMU Typewriter Text} % моноширинный шрифт
+\newfontfamily\cyrillicfonttt{CMU Typewriter Text} % моноширинный шрифт для кириллицы
+\defaultfontfeatures{Ligatures=TeX} % стандартные лигатуры TeX, замены нескольких дефисов на тире и т. п. Настройки моноширинного шрифта должны идти до этой строки, чтобы при врезках кода программ в коде не применялись лигатуры и замены дефисов
+\setmainfont{CMU Serif} % Шрифт с засечками
+\newfontfamily\cyrillicfont{CMU Serif} % Шрифт с засечками для кириллицы
+\setsansfont{CMU Sans Serif} % Шрифт без засечек
+\newfontfamily\cyrillicfontsf{CMU Sans Serif} % Шрифт без засечек для кириллицы
+\usepackage{circuitikz}
+\usepackage{amsmath,graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol,multirow}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{textpos}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{blindtext}
+
+\paperwidth = 297mm
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,nolistsep}
+
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+     \Large{\textbf{Контроллер дверного замка hh24lock}} \\
+\end{center}
+\begin{multicols}{3}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{Общие положения}
+
+Это руководство является дополнением к инструкции по подключению и программированию кодонаборной панели. 
+
+\section{Совместимость с другими модулями}
+
+Варианты исполнения S2-S4 помимо функции удаленного управления дверным замком также поддерживают подключение внешних датчиков  в составе различных исполнений модуля hh24ups. 
+
+\textbf{ВНИМАНИЕ! контроллеры hh24lock не поддерживают управление внешними реле, а также работу с модулями hh24block и hh24sens.}
+
+\subsection{Совместимость с различными вариантами блоков hh24ups}
+
+\noindent\begin{tabular}{p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+\hline
+\texttt{}&\texttt{hh24ups S1}&\texttt{hh24ups S2}&\texttt{hh24ups S3}&\texttt{hh24ups S4}\\
+\hline
+\textbf{S1}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S2}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S3}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S2}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}\\
+\hline
+\end{tabular}
+
+\textbf{При использовании контроллеров вариантов S2-S4 с модулем hh24ups S1 функционал опроса датчиков недоступен}
+
+\subsection{Совместимость со внешними считывателями Weigand 26|34}
+
+\noindent\begin{tabular}{p{7cm}|p{5cm}}
+\hline
+\textbf{hh24lock S1}&\multicolumn{1}{c}{\textbf{+}}\\
+\textbf{hh24lock S2}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{hh24lock S3}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{hh24lock S4}&\multicolumn{1}{c}{\textbf{-}}\\
+\hline
+\end{tabular}
+
+\section{Функциональные возможности}
+
+\begin{itemize} 
+  \item управление замком через сервер hh24lock и внешнее API
+  \item удаленный контроль уровня шума в помещении с распознованием типа шума (варианты S2 и S4 при использовании совместно с блоком hh24sens соответствующего исполнения)
+  \item удаленный контроль присутствия в помещении (варианты S3 и S4 при использовании совместно с блоком hh24sens соответствующего исполнения)
+\end{itemize}
+
+\section{Монтаж контроллера}
+
+Полностью по инструкции кодонаборной панели. В случае использования блока hh24ups с учетом инструкции к блоку. 
+
+\textbf{При монтаже устройств в исполнениях S2-S4 важно не допускать замыкания белого и зеленого проводников на контакты GND или + питания - устройство может выйти из строя.} 
+
+
+\section{Первое включение устройства}
+
+При первом включении устройство сохраняет для дальнешей работы сведения о Wi-Fi сети, с которой оно будет работать. Для успешного подключения понадобится пароль от Wi-Fi сети и любое другое устройство, имеющее возможность работы с Wi-Fi (например, мобильный телефон или ноутбук).
+
+Для осуществления привязки необходимо:
+
+\begin{itemize}
+  \item подключить устройство к контроллеру СКУД согласно схеме выше 
+  \item удостовериться в наличии и работоспособности Wi-Fi сети, с которой будет работать устройство
+  \item осуществить принудительную перезагрузку устройства 
+  \item на втором устройстве в списке сетей Wi-Fi выбрать сеть hh24lock и подключиться к ней
+  \item подключение потребует дополнительной авторизации - на мобильном телефоне или ноутбуке появится соответствующее уведомление. В случае отсутствия уведомления можно открыть в браузере сайт https://hh24lock.ru/ 
+  \item в появившемся диалоговом окне необходимо выбрать Wi-Fi сеть, с которой будет работать устройство, и ввести пароль к ней
+  \item надпись Success укажет на успешное подключение устройства. При этом из списка доступных Wi-Fi сетей исчезнет сеть hh24lock.
+\end{itemize}
+
+В случае смены рабочей Wi-Fi сети и/или пароля к ней, устройство потребуется переподключить. 
+
+\section{Принудительная перезагрузка устройства}
+
+Принудительная перезагрузка устройства возможна двумя способами:  
+
+\begin{itemize} 
+  \item путем кратковременного отключения устройства от линии питания 12 Вольт
+  \item при снятой задней крышке путем нажатия тонким предметом на кнопку сброса, расположенную за наклейкой
+\end{itemize}
+
+Успешность перезагрузки устройства индикатируется зеленым сигналом светодиода. 
+
+\section{Возможные неполадки и способы их устранения}
+
+\noindent\begin{tabular}{p{4cm}|p{4cm}}
+\texttt{Устройство не передает данные и/или не получает коды открытия двери с сервера}&\texttt{Переподключить устройство к Wi-Fi сети как описано в разделе "Первое включение устройства"}\\
+\hline
+\texttt{Устройство не передает данные датчиков}&\texttt{Проверить корректность монтажа зеленого и белого проводов и настройки датчиков}\\
+\hline
+\end{tabular}
+
+\Large{	
+\begin{luacode}
+tex.print('Серийный номер уст-ва: '..math.ceil(math.random()*10000))
+\end{luacode}
+}
+
+\end{multicols}
+\end{document}
