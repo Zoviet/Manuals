@@ -24,6 +24,7 @@
 \usepackage{geometry}
 \usepackage{tabularx}
 \usepackage{blindtext}
+\usepackage{luapackageloader}
 
 \paperwidth = 297mm
 \geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} 
@@ -269,19 +270,22 @@
 \begin{luacode}
 local user = require("user")
 	function get_login(id)
-		tex.print(user.get_login(id))
+		tex.print(user.get_login(string.match(id,'%d+')))
 	end
-	function get_password(id)
-		tex.print(user.get_password(id))
+	function get_password()
+		tex.print(user.get_password())
+	end
+	function get_master_code()
+		tex.print(user.get_master_code())
 	end
 \end{luacode}
 
 \section{Доступ к hh24lock.ru и API}
 
 \fbox{ 
-	ID устройства: \textbf{\jobname }
-	Логин hh24lock.ru: \textbf{\luadirect{get_password(\luastringN{\jobname})} }
-	Пароль: \textbf{\luadirect{get_login(\luastringN{\jobname})} }
+	ID: \textbf{\jobname }
+	Логин: \textbf{\luadirect{get_login(\luastring{\jobname})} }
+	Пароль: \textbf{\luadirect{get_password()} }
 }
 
 \end{multicols}
