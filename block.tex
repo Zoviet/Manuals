@@ -26,8 +26,7 @@
 \usepackage{blindtext}
 
 \paperwidth = 297mm
-\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
-\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} 
 
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep,nolistsep}
@@ -267,10 +266,22 @@
 
 Замену необходимо производить на выключенном от сети устройстве. После замены аккумуляторов сработает защита и устройство автоматически отключится. Для проверки его работоспособности с замененными аккумуляторами необходимо кратковременно включить устройство в сеть. 
 
-\Large{	
 \begin{luacode}
-tex.print('Серийный номер уст-ва: '..math.ceil(math.random()*10000))
+local user = require("user")
+	function get_login(id)
+		tex.print(user.get_login(id))
+	end
+	function get_password(id)
+		tex.print(user.get_password(id))
+	end
 \end{luacode}
+
+\section{Доступ к hh24lock.ru и API}
+
+\fbox{ 
+	ID устройства: \textbf{\jobname }
+	Логин hh24lock.ru: \textbf{\luadirect{get_password(\luastringN{\jobname})} }
+	Пароль: \textbf{\luadirect{get_login(\luastringN{\jobname})} }
 }
 
 \end{multicols}

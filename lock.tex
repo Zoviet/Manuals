@@ -132,6 +132,7 @@
   \item надпись Success укажет на успешное подключение устройства. При этом из списка доступных Wi-Fi сетей исчезнет сеть hh24lock.
 \end{itemize}
 
+
 В случае смены рабочей Wi-Fi сети и/или пароля к ней, устройство потребуется переподключить. 
 
 \section{Принудительная перезагрузка устройства}
@@ -154,10 +155,22 @@
 \hline
 \end{tabular}
 
-\Large{	
 \begin{luacode}
-tex.print('Серийный номер уст-ва: '..math.ceil(math.random()*10000))
+local user = require("user")
+	function get_login(id)
+		tex.print(user.get_login(id))
+	end
+	function get_password(id)
+		tex.print(user.get_password(id))
+	end
 \end{luacode}
+
+\section{Доступ к hh24lock.ru и API}
+
+\fbox{ 
+	ID устройства: \textbf{\jobname }
+	Логин hh24lock.ru: \textbf{\luadirect{get_password(\luastringN{\jobname})} }
+	Пароль: \textbf{\luadirect{get_login(\luastringN{\jobname})} }
 }
 
 \end{multicols}
