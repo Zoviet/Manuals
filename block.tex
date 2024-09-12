@@ -1,0 +1,280 @@
+\documentclass[a4paper,10pt,landscape]{article}
+\usepackage{luacode}
+\usepackage{polyglossia} % Поддержка многоязычности (fontspec подгружается автоматически)
+\setmainlanguage[babelshorthands=true]{russian} % Язык по-умолчанию русский с поддержкой приятных команд пакета babel
+\setotherlanguage{english} % Дополнительный язык = английский (в американской вариации по-умолчанию)
+\setmonofont{CMU Typewriter Text} % моноширинный шрифт
+\newfontfamily\cyrillicfonttt{CMU Typewriter Text} % моноширинный шрифт для кириллицы
+\defaultfontfeatures{Ligatures=TeX} % стандартные лигатуры TeX, замены нескольких дефисов на тире и т. п. Настройки моноширинного шрифта должны идти до этой строки, чтобы при врезках кода программ в коде не применялись лигатуры и замены дефисов
+\setmainfont{CMU Serif} % Шрифт с засечками
+\newfontfamily\cyrillicfont{CMU Serif} % Шрифт с засечками для кириллицы
+\setsansfont{CMU Sans Serif} % Шрифт без засечек
+\newfontfamily\cyrillicfontsf{CMU Sans Serif} % Шрифт без засечек для кириллицы
+\usepackage{circuitikz}
+\usepackage{amsmath,graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{multicol,multirow}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{textpos}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{blindtext}
+
+\paperwidth = 297mm
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} 
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,nolistsep}
+
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+     \Large{\textbf{Модуль управления СКУД контроллерами hh24block}} \\
+\end{center}
+\begin{multicols}{3}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{Варианты исполнения}
+
+\noindent\begin{tabular}{p{1cm}|p{3cm}|p{3cm}}
+\hline
+\texttt{}&\texttt{Подключение модуля hh24sens}&\texttt{Подключение модуля hh24relay}\\
+\hline
+\textbf{S1}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S2}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{-}}\\
+\textbf{S3}&\multicolumn{1}{c}{\textbf{-}}&\multicolumn{1}{c}{\textbf{+}}\\
+\textbf{S4}&\multicolumn{1}{c}{\textbf{+}}&\multicolumn{1}{c}{\textbf{+}}\\
+\hline
+\end{tabular}
+
+\section{Функциональные возможности}
+
+\begin{itemize} 
+  \item управление контроллерами СКУД c протоколом Weigand 26|34 через сервер hh24lock*  
+  \item обеспечение резервированного питания контроллера СКУД и электромеханического замка
+  \item поддержка модуля внешних датчиков hh24sens (варианты S2 и S4)
+  \item поддержка модуля внешних силовых реле hh24relay (варианты S3 и S4)
+\end{itemize}
+* Поддерживаются все контроллеры с наличием выхода Weigand и входом для кнопки открытия двери изнутри
+
+\section{Технические характеристики}
+
+\noindent\begin{tabular}{p{6cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{Напряжение питания}&\multicolumn{1}{c}{\texttt{110-220}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Ток потребления}&\multicolumn{1}{c}{\texttt{<0.18}}&\multicolumn{1}{c}{\texttt{мА}}\\
+\hline
+\texttt{Напряжение на выходе питания контроллера}&\multicolumn{1}{c}{\texttt{11.4}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Напряжение на выходе питания релейного модуля}&\multicolumn{1}{c}{\texttt{3.4-4.2}}&\multicolumn{1}{c}{\texttt{В}}\\
+\hline
+\texttt{Максимальный ток на выходе 12 В}&\multicolumn{1}{c}{\texttt{2.1}}&\multicolumn{1}{c}{\texttt{А}}\\
+\hline
+\texttt{Максимальный ток на выходе 3.4 В}&\multicolumn{1}{c}{\texttt{50}}&\multicolumn{1}{c}{\texttt{мА}}\\
+\hline
+\texttt{Безтоковая пауза при исчезновении питания от сети, не более}&\multicolumn{1}{c}{\texttt{150}}&\multicolumn{1}{c}{\texttt{мс}}\\
+\hline
+\texttt{Безтоковая пауза при выходе из автономного режима (появления напряжения сети)}&\multicolumn{1}{c}{\texttt{0}}&\multicolumn{1}{c}{\texttt{с}}\\
+\hline
+\texttt{Время автономной работы в режиме ожидания, не менее}&\multicolumn{1}{c}{\texttt{48}}&\multicolumn{1}{c}{\texttt{час}}\\
+\hline
+\texttt{Количество срабатываний замка за 20 сек в автономном режиме до включения защиты, не менее}&\multicolumn{1}{c}{\texttt{4}}&\multicolumn{1}{c}{\texttt{раз}}\\
+\hline
+\texttt{Время полной зарядки аккумуляторов после цикла автономной работы в течении 24 часов, не более}&\multicolumn{1}{c}{\texttt{3}}&\multicolumn{1}{c}{\texttt{час}}\\
+\hline
+\texttt{Поддерживаемые протоколы Weigand}&\multicolumn{1}{c}{\texttt{26,34}}&\multicolumn{1}{c}{\texttt{}}\\
+\hline
+\end{tabular}
+
+\section{Функции защиты}
+
+\begin{itemize} 
+  \item защита от перезарядки встроенных аккумуляторов    
+  \item защита от повреждения встроенных аккумуляторов
+  \item защита от короткого замыкания на выходе
+  \item защита от превышения максимально допустимого тока
+\end{itemize}
+
+\textbf{При срабатывании любой функции защиты во время работы устройства в автономном режиме самостоятельное восстановление работы устройства возможно только после подключения его к питающей сети}
+
+
+\section{Подключение к контроллеру СКУД}
+
+Подключение контроллера СКУД к устройству осуществляется по инструкции контроллера в соответствии со схемой подключения производителя для режима Weigand Output Reader или аналогичного. Для большинства распространенных контроллеров Tantos, PS-Link и т.д. цветовая маркировка в жгуте проводов будет следующей:
+
+\noindent\begin{tabular}{p{3cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{}&\texttt{Цвет провода hh24block}&\texttt{Цвет провода контоллера}\\
+\hline
+\texttt{+12 В}&\multicolumn{1}{c}{\texttt{Светло-красный}}&\multicolumn{1}{c}{\texttt{Красный}}\\
+\hline
+\texttt{GND}&\multicolumn{1}{c}{\texttt{Серый}}&\multicolumn{1}{c}{\texttt{Черный}}\\
+\hline
+\texttt{D0}&\multicolumn{1}{c}{\texttt{Зеленый}}&\multicolumn{1}{c}{\texttt{Зеленый}}\\
+\hline
+\texttt{D1}&\multicolumn{1}{c}{\texttt{Белый}}&\multicolumn{1}{c}{\texttt{Белый}}\\
+\hline
+\texttt{OPENDOOR*}&\multicolumn{1}{c}{\texttt{Желтый}}&\multicolumn{1}{c}{\texttt{Желтый}}\\
+\hline
+\end{tabular}
+
+*Провод OPENDOOR должен быть подключен со стороны контроллера СКУД, а не кнопки открытия двери:
+
+\begin{circuitikz}
+\draw
+	(-1,0.5) node[ground] {} 	
+	to[short,o-] node[left] {} (0,0.5)	
+	to[short,o-] (3,0.5)	
+	node[label={[font=\footnotesize]right:$GND$}] {}
+	to[short,o-] (0,0.5)	
+	to[push button] node[label={}] {} (0,1.5)	
+	to[short,o-] (-1,1.5)	
+	node[label={[font=\footnotesize]left:$OPEN$}] {} 
+	to[short,o-] (0,1.5)
+	to[short,o-] (3,1.5)
+	node[label={[font=\footnotesize]right:$OPENDOOR$}] {} 
+	to[short,o-] (0,1.5)
+	(-1,2) node[label={[font=\footnotesize]left:$+12$}] {} 
+	to[short,o-] (3,2)	
+	node[label={[font=\footnotesize]right:$+12$}] {} 
+	to[short,o-] (-1,2)	
+	(-1,2.5) node[label={[font=\footnotesize]left:$D1$}] {} 
+	to[short,o-] (3,2.5)	
+	node[label={[font=\footnotesize]right:$D1$}] {} 
+	to[short,o-] (-1,2.5)	
+	(-1,3) node[label={[font=\footnotesize]left:$D0$}] {} 
+	to[short,o-] (3,3)	
+	node[label={[font=\footnotesize]right:$D0$}] {} 
+	to[short,o-] (-1,3)	
+;
+
+\end {circuitikz}
+
+\section{Подключение к модулю датчиков hh24sens}
+
+Доступно для вариантов исполнения S2 и S4.
+
+\noindent\begin{tabular}{p{3cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{}&\texttt{Цвет провода hh24block}&\texttt{Вход модуля}\\
+\hline
+\texttt{+3.3 В}&\multicolumn{1}{c}{\texttt{Красный}}&\multicolumn{1}{c}{\texttt{+3.3}}\\
+\hline
+\texttt{GND}&\multicolumn{1}{c}{\texttt{Коричневый}}&\multicolumn{1}{c}{\texttt{GND}}\\
+\hline
+\texttt{A0}&\multicolumn{1}{c}{\texttt{Желтый}}&\multicolumn{1}{c}{\texttt{Sound}}\\
+\hline
+\texttt{D0}&\multicolumn{1}{c}{\texttt{Синий}}&\multicolumn{1}{c}{\texttt{Motion}}\\
+\hline
+\end{tabular}
+
+\section{Подключение к модулю реле hh24relay}
+
+Доступно для вариантов исполнения S3 и S4.
+
+\noindent\begin{tabular}{p{3cm}|p{2cm}|p{2cm}}
+\hline
+\texttt{}&\texttt{Цвет провода hh24block}&\texttt{Вход модуля}\\
+\hline
+\texttt{+3.3 В}&\multicolumn{1}{c}{\texttt{Красный}}&\multicolumn{1}{c}{\texttt{+3.3}}\\
+\hline
+\texttt{GND}&\multicolumn{1}{c}{\texttt{Коричневый}}&\multicolumn{1}{c}{\texttt{GND}}\\
+\hline
+\texttt{R1}&\multicolumn{1}{c}{\texttt{Желтый}}&\multicolumn{1}{c}{\texttt{Relay1}}\\
+\hline
+\texttt{R1}&\multicolumn{1}{c}{\texttt{Синий}}&\multicolumn{1}{c}{\texttt{Relay2}}\\
+\hline
+\end{tabular}
+
+\section{Первое включение устройства}
+
+При первом включении устройство сохраняет для дальнешей работы сведения о Wi-Fi сети, с которой оно будет работать. Для успешного подключения понадобится пароль от Wi-Fi сети и любое другое устройство, имеющее возможность работы с Wi-Fi (например, мобильный телефон или ноутбук).
+
+Для осуществления привязки необходимо:
+
+\begin{itemize}
+  \item подключить устройство к контроллеру СКУД согласно схеме выше 
+  \item удостовериться в наличии и работоспособности Wi-Fi сети, с которой будет работать устройство
+  \item осуществить принудительную перезагрузку устройства 
+  \item на втором устройстве в списке сетей Wi-Fi выбрать сеть hh24lock и подключиться к ней
+  \item подключение потребует дополнительной авторизации - на мобильном телефоне или ноутбуке появится соответствующее уведомление. В случае отсутствия уведомления можно открыть в браузере сайт https://hh24lock.ru/ 
+  \item в появившемся диалоговом окне необходимо выбрать Wi-Fi сеть, с которой будет работать устройство, и ввести пароль к ней
+  \item надпись Success укажет на успешное подключение устройства. При этом из списка доступных Wi-Fi сетей исчезнет сеть hh24lock.
+\end{itemize}
+
+В случае смены рабочей Wi-Fi сети и/или пароля к ней, устройство потребуется переподключить. 
+
+\section{Принудительная перезагрузка устройства}
+
+Принудительная перезагрузка устройства возможна двумя способами:  
+
+\begin{itemize} 
+  \item путем кратковременного (не более, чем на 10 секунд) отключения устройства от питающей сети 
+  \item путем нажатия тонким предметом на кнопку сброса, расположенную за наклейкой со стороны выводного провода
+\end{itemize}
+
+Большинство подключенных СКУД контроллеров подтвердят успешность перезагрузки устройства зеленым сигналом светодиода. 
+
+\section{Возможные неполадки и способы их устранения}
+
+\noindent\begin{tabular}{p{4cm}|p{4cm}}
+\hline
+\texttt{Нет напряжения на выходе в автономном режиме}&\texttt{Кратковременно подключить устройство к сети}\\
+\hline
+\texttt{Устройство не заряжается в процессе работы, но заряжается в режиме ожидания}&\texttt{Отключить устройство от сети на 10-15 минут и включить заново}\\
+\hline
+\texttt{Устройство не работает в автономном режиме}&\texttt{Заменить аккумуляторы}\\
+\hline
+\texttt{Устройство не передает данные и/или не получает коды открытия двери с сервера}&\texttt{Переподключить устройство к Wi-Fi сети как описано в разделе "Первое включение устройства"}\\
+\hline
+\end{tabular}
+
+\section{Замена аккумуляторов}
+
+\textbf{Замена аккумуляторов возможна только парами.} Необходимо использовать аккумуляторы типа 18650, поддерживающие высокотоковый разряд. 
+
+Замену необходимо производить на выключенном от сети устройстве. После замены аккумуляторов сработает защита и устройство автоматически отключится. Для проверки его работоспособности с замененными аккумуляторами необходимо кратковременно включить устройство в сеть. 
+
+\Large{	
+\begin{luacode}
+tex.print('Серийный номер уст-ва: '..math.ceil(math.random()*10000))
+\end{luacode}
+}
+
+\end{multicols}
+\end{document}
+
+
+
