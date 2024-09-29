@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  12 SEP 2024 17:59
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  29 SEP 2024 13:07
  restricted system commands enabled.
 **./lock.tex
 (./lock.tex
@@ -226,12 +226,12 @@ braces):
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
 Module polyglossia Info: Language data for russian
-(polyglossia)            patterns	hyph-ru.pat.txt
-(polyglossia)            righthyphenmin	2
-(polyglossia)            hyphenation	hyph-ru.hyp.txt
 (polyglossia)            synonyms	
+(polyglossia)            loader	loadhyph-ru.tex
+(polyglossia)            patterns	hyph-ru.pat.txt
 (polyglossia)            lefthyphenmin	2
-(polyglossia)            loader	loadhyph-ru.tex on input line 17
+(polyglossia)            hyphenation	hyph-ru.hyp.txt
+(polyglossia)            righthyphenmin	2 on input line 17
 Module polyglossia Info: Language russian was not yet loaded; created with id 2 
 on input line 17
 Package polyglossia Info: Option: Russian, numerals=arabic.
@@ -1304,7 +1304,9 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count354
 \c@blind@pangrammax=\count355
 )
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/usr/share/texlive/texmf-dist/tex/luatex/luapackageloader/luapackageloader.sty
+Package: luapackageloader 2019/12/21 v0.2 Lua package searchers for LuaTeX
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks45
 \labelindent=\skip65
@@ -1321,32 +1323,32 @@ luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus)
 \openout1 = lock.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-4.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1370,7 +1372,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 54.
+Package hyperref Info: Link coloring ON on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1383,9 +1385,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count364
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 (./lock.out) (./lock.out)
 \@outlinefile=\write4
@@ -1426,12 +1428,12 @@ LaTeX Info: Redefining \nameref on input line 54.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \rmfamily on input line 54.
-LaTeX Info: Redefining \sffamily on input line 54.
-LaTeX Info: Redefining \ttfamily on input line 54.
-LaTeX Info: Redefining \rmfamily on input line 54.
-LaTeX Info: Redefining \sffamily on input line 54.
-LaTeX Info: Redefining \ttfamily on input line 54.
+LaTeX Info: Redefining \rmfamily on input line 55.
+LaTeX Info: Redefining \sffamily on input line 55.
+LaTeX Info: Redefining \ttfamily on input line 55.
+LaTeX Info: Redefining \rmfamily on input line 55.
+LaTeX Info: Redefining \sffamily on input line 55.
+LaTeX Info: Redefining \ttfamily on input line 55.
 luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
@@ -1441,65 +1443,67 @@ uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-0.
+1.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-0.
+1.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-80.
+81.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-80.
+81.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 80.
+(Font)              <8> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 80.
+(Font)              <6> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 80.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+(Font)              <5> on input line 81.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 83--83
 []|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
 
-Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 83--83
 []|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
 
-Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--82
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 83--83
 []|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
 
-Overfull \hbox (0.94724pt too wide) in paragraph at lines 82--83
+Overfull \hbox (0.94724pt too wide) in paragraph at lines 83--84
 []|\TU/CMUTypewriterText(1)/m/n/8 hh24ups
  []
 
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
@@ -1595,28 +1599,34 @@ LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus)
-Package rerunfilecheck Info: File `lock.out' has not changed.
-(rerunfilecheck)             Checksum: 62872E22D818FA1466A40C7B6B81952C;2790.
+
+Package rerunfilecheck Warning: File `lock.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `lock.out':
+(rerunfilecheck)             Before: 62872E22D818FA1466A40C7B6B81952C;2790
+(rerunfilecheck)             After:  4B23C6628617422A425AA8B6171E000C;3185.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40897 strings out of 477805
+ 40928 strings out of 477805
  156304,1648299 words of node,token memory allocated
  554 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 62 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:951,3:623,4:105,5:684,6:162,7:13912,8:33,9:1149,10:24,11:1
-833
- 60353 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:977,3:641,4:105,5:738,6:165,7:14047,8:36,9:1194,10:24,11:1
+836
+ 60374 multiletter control sequences out of 65536+600000
  71 fonts using 16758663 bytes
  115i,8n,111p,531b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmuntt.otf></usr
 /share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunrm.otf></usr/shar
 e/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.otf>
-Output written on lock.pdf (1 page, 29956 bytes).
+Output written on lock.pdf (1 page, 30399 bytes).
 
-PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 131072)
+PDF statistics: 78 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 131072)
  88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

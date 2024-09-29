@@ -267,25 +267,10 @@
 
 Замену необходимо производить на выключенном от сети устройстве. После замены аккумуляторов сработает защита и устройство автоматически отключится. Для проверки его работоспособности с замененными аккумуляторами необходимо кратковременно включить устройство в сеть. 
 
-\begin{luacode}
-local user = require("user")
-	function get_login(id)
-		tex.print(user.get_login(string.match(id,'%d+')))
-	end
-	function get_password()
-		tex.print(user.get_password())
-	end
-	function get_master_code()
-		tex.print(user.get_master_code())
-	end
-\end{luacode}
-
-\section{Доступ к hh24lock.ru и API}
+\section{Данные для регистрации устройства на hh24lock.ru}
 
 \fbox{ 
-	ID: \textbf{\jobname }
-	Логин: \textbf{\luadirect{get_login(\luastring{\jobname})} }
-	Пароль: \textbf{\luadirect{get_password()} }
+	GUID: \textbf{\jobname }
 }
 
 \end{multicols}

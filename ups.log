@@ -1,7 +1,7 @@
 This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  29 SEP 2024 13:06
  restricted system commands enabled.
-**./block.tex
-(./block.tex
+**./ups.tex
+(./ups.tex
 LaTeX2e <2021-11-15> patch level 1
 Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
 Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
@@ -226,12 +226,12 @@ braces):
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
 Module polyglossia Info: Language data for russian
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	2
-(polyglossia)            synonyms	
 (polyglossia)            loader	loadhyph-ru.tex
 (polyglossia)            patterns	hyph-ru.pat.txt
-(polyglossia)            hyphenation	hyph-ru.hyp.txt on input line 17
+(polyglossia)            synonyms	
+(polyglossia)            hyphenation	hyph-ru.hyp.txt
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            righthyphenmin	2 on input line 17
 Module polyglossia Info: Language russian was not yet loaded; created with id 2 
 on input line 17
 Package polyglossia Info: Option: Russian, numerals=arabic.
@@ -1303,65 +1303,54 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count353
 \c@blind@pangramcount=\count354
 \c@blind@pangrammax=\count355
-)
-(/usr/share/texlive/texmf-dist/tex/luatex/luapackageloader/luapackageloader.sty
-Package: luapackageloader 2019/12/21 v0.2 Lua package searchers for LuaTeX
-) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\enitkv@toks@=\toks45
-\labelindent=\skip65
-\enit@outerparindent=\dimen317
-\enit@toks=\toks46
-\enit@inbox=\box113
-\enit@count@id=\count356
-\enitdp@description=\count357
-) (./block.aux
+) (./ups.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus)
-\openout1 = block.aux
+\openout1 = ups.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-4.
+2.
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count358
-\scratchdimen=\dimen318
-\scratchbox=\box114
-\nofMPsegments=\count359
-\nofMParguments=\count360
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count361
-\MPscratchDim=\dimen319
-\MPnumerator=\count362
-\makeMPintoPDFobject=\count363
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count356
+\scratchdimen=\dimen317
+\scratchbox=\box113
+\nofMPsegments=\count357
+\nofMParguments=\count358
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count359
+\MPscratchDim=\dimen318
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1371,7 +1360,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 54.
+Package hyperref Info: Link coloring ON on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1382,16 +1371,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count364
+\c@section@level=\count362
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
-(./block.out) (./block.out)
+(./ups.out) (./ups.out)
 \@outlinefile=\write4
 
-\openout4 = block.out
+\openout4 = ups.out
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1401,15 +1390,15 @@ LaTeX Info: Redefining \nameref on input line 54.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(14.22636pt, 816.59412pt, 14.22636pt)
-* v-part:(T,H,B)=(14.22636pt, 569.05515pt, 14.22636pt)
+* h-part:(L,W,R)=(28.45274pt, 788.14136pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 540.60239pt, 28.45274pt)
 * \paperwidth=845.04684pt
 * \paperheight=597.50787pt
-* \textwidth=816.59412pt
-* \textheight=569.05515pt
-* \oddsidemargin=-58.04362pt
-* \evensidemargin=-58.04362pt
-* \topmargin=-95.04362pt
+* \textwidth=788.14136pt
+* \textheight=540.60239pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1427,64 +1416,61 @@ LaTeX Info: Redefining \nameref on input line 54.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \rmfamily on input line 54.
-LaTeX Info: Redefining \sffamily on input line 54.
-LaTeX Info: Redefining \ttfamily on input line 54.
-LaTeX Info: Redefining \rmfamily on input line 54.
-LaTeX Info: Redefining \sffamily on input line 54.
-LaTeX Info: Redefining \ttfamily on input line 54.
+LaTeX Info: Redefining \rmfamily on input line 52.
+LaTeX Info: Redefining \sffamily on input line 52.
+LaTeX Info: Redefining \ttfamily on input line 52.
+LaTeX Info: Redefining \rmfamily on input line 52.
+LaTeX Info: Redefining \sffamily on input line 52.
+LaTeX Info: Redefining \ttfamily on input line 52.
 luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
 uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
+luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
+uage rus
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-0.
+5.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-0.
+5.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-70.
+75.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-70.
+75.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 75.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 75.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 70.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+(Font)              <5> on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
-[]|\TU/CMUTypewriterText(1)/m/n/8 Под-клю-че-ние мо-ду-ля
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-[]|\TU/CMUTypewriterText(1)/m/n/8 Под-клю-че-ние мо-ду-ля
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+[]|\TU/CMUTypewriterText(1)/m/n/8 Дат-чик при-
  []
 
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
@@ -1497,55 +1483,11 @@ luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
-Underfull \hbox (badness 7379) in paragraph at lines 254--255
+Underfull \hbox (badness 7379) in paragraph at lines 165--166
 []|\TU/CMUTypewriterText(1)/m/n/8 Крат-ко-вре-мен-но под-кл
 ю-чить
  []
 
-luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
-uage rus
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1601,43 +1543,34 @@ braces):
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./block.aux
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ups.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus)
-
-Package rerunfilecheck Warning: File `block.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `block.out':
-(rerunfilecheck)             Before: 2E9497BA20669CB957E4BBD1443AA60B;2954
-(rerunfilecheck)             After:  58B05D80692E71E49752D6C577AE4C41;3350.
+Package rerunfilecheck Info: File `ups.out' has not changed.
+(rerunfilecheck)             Checksum: 70858D220032479A318A4640142AD1D6;1792.
 )
 
 Here is how much of LuaTeX's memory you used:
- 41440 strings out of 477805
- 305309,1648299 words of node,token memory allocated
+ 40555 strings out of 477805
+ 195387,1648299 words of node,token memory allocated
  554 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 62 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:2,2:5273,3:3833,4:135,5:1134,6:300,7:25480,8:42,9:3690,10:26,1
-1:2916
- 60884 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:1273,3:629,4:63,5:732,6:201,7:15715,8:45,9:1932,10:26,11:2
+259
+ 60016 multiletter control sequences out of 65536+600000
  70 fonts using 16413215 bytes
- 115i,8n,111p,575b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-mathit.enc}</usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicod
-e/cmunrm.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmu
-ntt.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.o
-tf></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr8.pfb>
-Output written on block.pdf (1 page, 66891 bytes).
+ 115i,8n,111p,635b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmuntt.otf></usr
+/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunrm.otf></usr/shar
+e/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.otf>
+Output written on ups.pdf (1 page, 32116 bytes).
 
-PDF statistics: 96 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 131072)
- 104 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 78 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 131072)
+ 80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
