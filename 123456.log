@@ -1,6 +1,6 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  29 SEP 2024 15:45
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.9.5)  29 SEP 2024 15:49
  restricted system commands enabled.
-**./lock.tex --jobname=123456
+**./lock.tex
 (./lock.tex
 LaTeX2e <2021-11-15> patch level 1
 Lua module: luaotfload 2021-05-21 3.18 Lua based OpenType font support
@@ -227,11 +227,11 @@ braces):
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
 Module polyglossia Info: Language data for russian
 (polyglossia)            loader	loadhyph-ru.tex
-(polyglossia)            synonyms	
-(polyglossia)            hyphenation	hyph-ru.hyp.txt
 (polyglossia)            lefthyphenmin	2
+(polyglossia)            patterns	hyph-ru.pat.txt
+(polyglossia)            hyphenation	hyph-ru.hyp.txt
 (polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-ru.pat.txt on input line 17
+(polyglossia)            synonyms	 on input line 17
 Module polyglossia Info: Language russian was not yet loaded; created with id 2 
 on input line 17
 Package polyglossia Info: Option: Russian, numerals=arabic.
@@ -1315,14 +1315,10 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box113
 \enit@count@id=\count356
 \enitdp@description=\count357
-) (./lock.aux
-LaTeX Info: Redefining \rmfamily on input line 20.
-LaTeX Info: Redefining \sffamily on input line 20.
-LaTeX Info: Redefining \ttfamily on input line 20.
-luaotfload | aux : font no 37 (nil) defines no feature for script latn with lang
-uage rus)
-\openout1 = lock.aux
+)
+No file 123456.aux.
 
+\openout1 = 123456.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
@@ -1334,7 +1330,6 @@ LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 5.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1388,11 +1383,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 55.
 LaTeX Info: Redefining \pageref on input line 55.
 LaTeX Info: Redefining \nameref on input line 55.
-
-(./lock.out) (./lock.out)
 \@outlinefile=\write4
 
-\openout4 = lock.out
+\openout4 = 123456.out
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1593,34 +1586,40 @@ braces):
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lock.aux
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./123456.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 luaotfload | aux : font no 48 (nil) defines no feature for script latn with lang
 uage rus)
-Package rerunfilecheck Info: File `lock.out' has not changed.
-(rerunfilecheck)             Checksum: 4B23C6628617422A425AA8B6171E000C;3185.
+
+Package rerunfilecheck Warning: File `123456.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `123456.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  4B23C6628617422A425AA8B6171E000C;3185.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40929 strings out of 477805
- 156304,1648299 words of node,token memory allocated
+ 40904 strings out of 477805
+ 156308,1648299 words of node,token memory allocated
  554 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 62 glue_spec,
  8 attribute_list, 2 write nodes
-   avail lists: 1:1,2:977,3:641,4:105,5:738,6:165,7:14047,8:36,9:1194,10:24,11:1
+   avail lists: 1:1,2:974,3:641,4:105,5:732,6:165,7:14053,8:36,9:1194,10:24,11:1
 836
- 60375 multiletter control sequences out of 65536+600000
+ 60364 multiletter control sequences out of 65536+600000
  71 fonts using 16758663 bytes
- 115i,8n,111p,548b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,8n,111p,531b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmuntt.otf></usr
 /share/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunrm.otf></usr/shar
 e/texlive/texmf-dist/fonts/opentype/public/cm-unicode/cmunbx.otf>
-Output written on lock.pdf (1 page, 30480 bytes).
+Output written on 123456.pdf (1 page, 29615 bytes).
 
-PDF statistics: 81 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+PDF statistics: 50 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 131072)
- 96 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
